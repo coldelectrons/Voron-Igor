@@ -47,7 +47,9 @@ So I adapted something like the Jubilee. I didn't know about the Voron Trident a
 I didn't like the Jubilee's use of springs to hold down the kinematic table, because I could easily see myself
 trying to lift a magnetic build plate off and stretching the springs. The springs Jubilee used were also tiny fiddly little bits.
 So I came up with a solution to use magnets as effectively as possible, given what I had and could easily model.
-The result is something that uses cheap magnets, in something like a Halbach array.
+The result is something that uses cheap magnets, in something like a Halbach array. The downside is that while I do have alot more
+magnetic 'stick' than otherwise, the magnets I used are cheap, and so it's not enough to keep the table in place when I invert
+the printer or turn it on it's side :)
 
 ### UnKlicky Tap?
 I wanted to try making a Tap upgrade for a printer.
@@ -65,18 +67,10 @@ and adding more wasn't an option. I also didn't want to have to source more spec
 
 I also have been wanting to try compliant mechanisms ('flexures') for a while.
 
-Thus is born an X carriage with a linear flexure and a UnKlicky-esque probe.
+Thus is born an X carriage with a flexure and a UnKlicky-esque probe switch.
 
-This is _very_ experimental, and will probably not work well when trying to do higher velocity or acceleration.
-The flexure is exactly that - flexible - and while it is contrained in which way it likes to flex, it's difficult to prevent all
-other axis of movement when just using plastic and in the size envelope of a Voron carriage.
+Does it work? As of 20230429, I have successfully tested it for homing and probing.
 
-This is likely something that would need tuning, based on the printer printing it and the filament used.
-
-The reason I'm still including this and going forward with it is that I'm going to lean on Klipper's `input shaping`
-to compensate for and measure the wobbliness.
-
-Wish me luck.
 
 ## FAQ
 ### Why isn't this perfect
@@ -88,7 +82,7 @@ just take dimesions and start over, because of curved surfaces and such didn't l
 would develop problems in FreeCAD when I tried to alter them.
 
 ### Why not include the full CAD files?
-* My CAD files are a mess
+* My CAD files are a mess. I import other stuff, and the resulting file is HUGE.
 * I use the FreeCAD-realthunder snap.
 * If you open them in another FreeCAD version, they will likely break, or need a 'recompute now', at which time they will break.
 * STEP files are stable
